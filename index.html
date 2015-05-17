@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Computer Science Seminar 1st Round</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<!--テーマ-->
+		<link rel="stylesheet" href="css/theme/black.css" id="theme"> 
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown=""
+						data-separator="^\n---$"　
+						data-separator-vertical="^\n>>>$"> 
+					<script type="text/template">
+						
+# Neural Network		
+
+So Yamaguchi  
+###j113126
+- - -
+コンピュータ科学セミナー第１回用
+ 
+**2015.5.25**
+
+<aside class="notes">
+  発表者が見るノート   
+  伝えたいことをメモ  
+</aside>
+
+
+---
+### 機械学習	#とは
+- - -
+
+
+
+>>>
+### ページ２−１
+ページ２から垂直に下に遷移する  
+垂直遷移には補助的な説明を
+
+- 普通のリスト
+- 簡潔にね
+
+>>>
+### ページ２−２
+どんどん書いていく
+
+>>>
+### 機械学習の詳しい概要について
+資料の最終ページにまとめたので興味のある人は読んでみてください.	
+
+---
+### Neural Network
+- - - 
+
+
+---
+
+---
+### ポップフィールドネットワーク
+- - -
+
+---
+###　algorithm
+- - -
+
+---
+### 実演
+- - -
+<aside class="notes">
+  Pythonのプログラムを動かして実行してみる.
+   
+</aside>
+
+---
+### 参考/引用
+- - -
+1. a
+2. i
+
+
+
+
+
+
+
+
+
+
+					</script>
+				</section>
+			</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true, //右下のコントロールを非表示
+				progress: true, //下部の進捗バーを非表示
+				slideNumber: true,　//右下にスライドのページ番号を表示
+				history: true, //各ページをブラウザの履歴に残す
+				center: true, //スライドの垂直方向を中央表示をしない(上寄せにする)
+				touch: false, // タッチ操作を無効化
+    			loop: false, // スライドをループさせる
+    			rtl: false,  // 右から左へのスライド
+    			fragments: false,// fragmentsを無効化する
+    			autoSlide: 0, // 自動スライドをミリ秒単位で設定。デフォルトは0（自動スライドしない）
+    			autoSlideStoppable: false ,// 左下の自動スライド停止用のボタンを非表示にする
+    			mouseWheel: false, // マウスのホイールによるスライドを可能にする
+
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					//{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+<!--
+	**操作方法**
+
+キー(代用) 		:操作
+→(i) 			:次のスライドへ水平移動
+←(h)　 			:前のスライドへ水平移動
+↓(j)　 			:下のスライドへ垂直移動
+↑(k)　 			:上のスライドへ垂直移動
+space(n)		:次のスライドへ垂直=>水平の順に移動
+shift+space(p)	:前のスライドへ垂直=>水平の順に移動
+home			:最初のスライドへ
+end 			:最後のスライドへ
+.(/)(b)			:ブラックアウト/ブラックイン
+Esc(o)			:概要表示
+f  				:全画面表示(fullscreen) Escで戻す
+
+-->
