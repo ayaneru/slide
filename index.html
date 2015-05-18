@@ -30,6 +30,10 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+		<script type="text/javascript"
+    	src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -41,19 +45,16 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-markdown=""
-						data-separator="^\n---$"　
-						data-separator-vertical="^\n>>>$"> 
+				<section data-markdown=""data-separator="^\n---$"data-separator-vertical="^\n>>>$"> 
 					<script type="text/template">
 						
-# Neural Network		
-
-So Yamaguchi  
-###j113126
+## Machine Learning
+### Neural Network		
 - - -
-コンピュータ科学セミナー第１回用
- 
-**2015.5.25**
+So Yamaguchi  
+j113126
+
+<small>コンピュータ科学セミナー第１回用<br>2015.5.25</small>
 
 <aside class="notes">
   発表者が見るノート   
@@ -67,13 +68,20 @@ So Yamaguchi
 
 
 
->>>
-### ページ２−１
-ページ２から垂直に下に遷移する  
-垂直遷移には補助的な説明を
+<aside class="notes">
+  自分は現在,機械学習の大好きマンなので今回10分の時間を用いて機械学習の説明をしたいと思っています.
+　ただ機械学習の説明だけでも10分言ってしまうのでここでは概要だけざっくばらんに説明します.本日は機械学習の説明をざっくりした後,私が今はまっているニューラルネットワークについて説明したいと思います.	
+  北山先生の「知識工学」を受講した方は既知事項が多いと思いますがご了承ください. 
+</aside>
 
-- 普通のリスト
-- 簡潔にね
+>>>
+###実用例  
+- - - 
+- ######Google日本語入力
+- ######電子辞書などの手書き文字認識(OCR)
+- ######デジカメやスマホカメラの自動顔認識
+- ######Amazonの「この商品を買った人はこんな商品も買っています」
+
 
 >>>
 ### ページ２−２
@@ -131,7 +139,12 @@ So Yamaguchi
 2.ニューロンが両方とも活性していない状態ならその間の   
 
 >>>
-### 重み設定
+### 重み設定  
+$
+  w\_{ij} = \sum\_{s} x\_i^s x\_j^s    
+$  
+sは記憶させるパターンを指す.  
+複数パターンがある場合は総和する.  
 ~~~python  
 for i in range(x.size):
 	for j in range(x.size):
@@ -142,7 +155,13 @@ for i in range(x.size):
 ~~~
 
 >>>
-###　学習
+### 学習
+
+$
+y\_i= \sum\_{j=0}^N w\_{ij} x\_{j}
+$
+
+
 ~~~python  
 for i in range(x.size):
 		y = y + (w[k][i]*x[0,i])
@@ -153,7 +172,7 @@ for i in range(x.size):
 ~~~
 
 ---
-### 実演
+### 今回すること
 - - -
 ホップフィールドネットワークでノイズありの画像からノイズなしの画像つまり元画像に復元してみたいと思います.
 
@@ -162,34 +181,62 @@ for i in range(x.size):
   2つの画像データを一つの脳的なものに記憶させる例をあげる
 </aside>
 
+>>>
+### 二つのパターン
+- - -
+<img src="picture/P1.png" alt ="p1" width="400" height="400" align="left">
+</img><img src="picture/P2.png"width="400" height="400" align="top"></img>
+
+>>>
+### 初期値
+- - -
+<img src="picture/begin.png" width="400" height="400" align="top">
+
+>>>
+###　実行した結果
+- - -
+<img src="picture/result.png"width="400" height="400" align="top">
+<p class="fragment">これはパターン1</p>  
+
+---
+###実演
+
 ---
 ###　まとめ
 - - -
 1.今流行りのディープラーニングはボルツマンマシンの多層である  
 2.そのボルツマンマシンはホップフィールドネットワークを下地にしている.  
 3.つまりホップフィールドネットワークが理解できればボルツマンマシンもわかる??  
-4.ボルツマンマシンがわかればディープラーニングがわかる??  
+4.ボルツマンマシンがわかればディープラーニングがわかる?? (飛躍しすぎ)  
 5.✌('ω'✌ )三✌('ω')✌三( ✌'ω')✌ 
 
 ---
 ### 展望
 - - -
-セミナーでディープラーニングについて説明できたらいいな.
-とにかく機械学習は楽しいです.
-人工知能の分野も楽しいです  
+セミナーでディープラーニングについて説明.  
+とにかく機械学習は楽しいです.  
+人工知能の分野も楽しいです.  
 ぜひぜひ(＾ν＾)  
 
 ---
 ### 参考/引用
 - - -
 1. [静岡理工科大学　菅沼研究室](https://www.sist.ac.jp/~suganuma/kougi/other_lecture/SE/net/net.htm,"ニューラルネットワーク")
-2. i
+2. [分からんこと多すぎ](http://rishida.hatenablog.com,"分からんこと多すぎ")
+3. 学習とアルゴリズム　電気学会　森北出版株式会社
 
-3. 今日のスライド:http://ayaneru.github.io/slide/#/ 
-
-
+- 今日のスライド:http://ayaneru.github.io/slide/#/ 
 
 ---
+###test
+- - -
+    
+
+
+
+
+
+
 
 
 
@@ -214,13 +261,20 @@ for i in range(x.size):
 				touch: false, // タッチ操作を無効化
     			loop: false, // スライドをループさせる
     			rtl: false,  // 右から左へのスライド
-    			fragments: false,// fragmentsを無効化する
+    			fragments: true,// fragmentsを無効化する
     			autoSlide: 0, // 自動スライドをミリ秒単位で設定。デフォルトは0（自動スライドしない）
     			autoSlideStoppable: false ,// 左下の自動スライド停止用のボタンを非表示にする
     			mouseWheel: false, // マウスのホイールによるスライドを可能にする
 
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+    			//スライドの移動方法
+    			// none/fade/slide/convex/concave/zoom
+				transition: 'slide',
+				
+				math: {
+        		mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+        		config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        		},
+				
 
 				// Optional reveal.js plugins
 				dependencies: [
@@ -230,7 +284,11 @@ for i in range(x.size):
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					// Speaker notes
 					{ src: 'plugin/notes/notes.js', async: true },
+					// MathJax
+        			{ src: 'plugin/math/math.js', async: true }
+        			// Remote control your reveal.js presentation using a touch device
 					//{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 
 				]
@@ -261,5 +319,12 @@ f  				:全画面表示(fullscreen) Escで戻す
 1.URLにindex.html?print-pdfを付与
 2.comand+pで印刷画面表示
 3.レイアウトを横にしてpdfにして保存
+
+	** 数式を書く場合**
+1.まず表記はtex
+2.$$ここにtexで書く$$
+
+	**　内部リンク **
+1.<p class="fragment">（[内部リンク](#/4/1)）</p>
 
 -->
